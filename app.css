@@ -1,1 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-color: #e4b363;
+}
+
+.warpper{
+  position:relative;
+  perspective: 400px;
+  animation: swirle-x 2s ease-out;
+}
+
+.card{
+border-radius: 5px;
+border: 1px rgba(128, 128, 128, 0.667) solid;
+padding: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 40%;
+position: absolute;
+left:30%;
+box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.32);
+overflow: hidden;
+animation: swirle-x 2s ease-in, shine 2s 3s 1;
+background: linear-gradient(-45deg, #cfcec4,#cfcec4,#cfcec4,#cfcec4,#ebedef,white,#cfcec4,#cfcec4,#cfcec4);
+background-size: 400% 400%;
+}
+
+.form-container{
+  width:70%;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+.form label{
+margin: 5px 0;
+}
+
+.form input{
+  margin-bottom: 10px;
+  background-color: #f1f0e5;
+  border: 1px solid #b7b6af;
+  height: 30px;
+}
+
+#checkbox-input{
+  height: 12.667px;
+}
+
+.form input:focus{
+  border: 0px transparent solid;
+}
+
+.form button{
+  width: 120px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  background: #EF6461;
+  border: transparent;
+  border-radius: 5px;
+  position: relative;
+  left:25%;
+  top: 20px;
+  margin:15px;
+}
+
+.form select{
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: #f1f0e5;
+  border: 1px solid #b7b6af;
+}
+
+
+@keyframes swirle-x{
+  from { 	transform: rotate(0deg) translateX(50px) translateZ(-600px);
+   }
+	to   {  transform: rotate(360deg) translateX(50px) translateZ(100px); }
+}
+
+@keyframes shine{
+  0% {
+    background-position: 0% 50%;
+}
+100% {
+    background-position: 100% 50%;
+}
+}
+
 
